@@ -60,6 +60,7 @@ else
   echo "Already a tag on this commit"
 fi
 
-echo ::set-output name=new-version::$NEW_TAG
+#
+echo "{name}={new-version::$NEW_TAG}" >> $GITHUB_OUTPUT
 
 exit 0
